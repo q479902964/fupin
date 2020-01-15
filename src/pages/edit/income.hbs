@@ -1,0 +1,18 @@
+<ul>
+  {{#each data}}
+    <a href="{{../_href.income}}?idcard={{idcard}}&id={{id}}">
+      <li class="list__item">
+          <div class="list__item--info">
+            <div class="info__name">{{industryTypeStr}} : {{sectorStr}}</div>
+            <div class="info__card">年收入：{{total}}</div>
+            <div class="info__card">年份：{{year}}</div>
+            <div></div>
+          </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
+  {{/each}}
+</ul>
+<div class="form-btn">
+  <button type="button"><a href="{{_href.income}}?idcard={{idcard}}">添加年收入信息</a></button>
+</div>

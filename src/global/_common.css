@@ -1,0 +1,141 @@
+@import './_reset.css';
+
+html, body {
+    font-size: 15px;
+    color: #333;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+button a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+button a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+.loading {
+    height: 70vh;
+    background: url(../../global/img/loading.gif) no-repeat;
+
+    background-size: 40px 40px;
+    background-position: center center;
+}
+.page-header {
+    height: 50px;
+    background: #164ab0;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 17px;
+}
+.page-header .icon-left {
+    width: 22px;
+    height: 22px;
+    background-image: url(../../global/img/left.svg);
+    opacity: 1;
+    transform: rotate(180deg) scale(0.92);
+}
+
+
+
+.page-header .header__btn-left {
+    width: 40px;
+}
+.page-header .header__btn--right {
+    width: 40px;
+}
+.form-container {
+    margin: 20px 12px;
+}
+
+.input__text {
+    border-bottom: 1px solid #dddddd;
+    /* margin: 12px 0; */
+    display: flex;
+    padding: 16px;
+    margin-top: 10px;
+}
+.input__text label {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 15px;
+}
+
+.input__text input {
+    width: 65%;
+}
+
+.input__radio {
+    margin: 12px 0;
+    padding: 12px;
+}
+
+.input__radio input {
+    margin-left: 42px;
+    margin-right: 4px;
+}
+
+._icon {
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+._textarea {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+}
+._textarea label {
+    margin-bottom: 8px;
+    margin-left: 12px;
+}
+._textarea textarea {
+    border: 1px solid #dddddd;
+    margin-top: 4px;
+    padding: 6px 12px;
+}
+.input__select {
+    margin: 16px 0;
+    padding: 0 12px;
+    /* margin-top: 10px; */
+}
+.input__select select {
+    min-width: 50px;
+    margin-left: 8px;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    padding: 1px;
+    background: transparent;
+    text-align: center;
+    background-image: url(../../global/img/down.png);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position-x: 92%;
+    background-position-y: center;
+    opacity: 0.9;
+}
+
+.form-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-btn button {
+    outline: none;
+    border: none;
+    background: #3570e6;
+    padding: 6px 12px;
+    color: #ffffff;
+    border-radius: 4px;
+    min-width: 100px;
+}

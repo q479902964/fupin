@@ -1,0 +1,149 @@
+<form class="form-container" id="basicInfoForm">
+  <div class="input__text">
+    <label>用户名</label>
+    <input type="text" name="username" value="{{data.username}}" />
+  </div>
+  <div class="input__text">
+    <label>曾用名</label>
+    <input type="text" name="formerName" value="{{data.formerName}}" />
+  </div>
+
+  <div class="input__radio">
+    <label>性别</label>
+    <input type="radio" name="sex" value="0" {{#is data.sex '==' '0'}}checked{{/is}}/>男
+    <input type="radio" name="sex" value="1" {{#is data.sex '==' '1'}}checked{{/is}}/>女
+  </div>
+
+  <div class="input__text">
+    <label>身份证号</label>
+    <input type="text" name="idcard" value="{{data.idcard}}"/>
+  </div>
+
+  <div class="input__select">
+    <label>出生日期</label>
+    <select name="year">
+      {{#if data.birth.year}}
+      <option>{{data.birth.year}}</option>
+      {{/if}}
+      {{#each birthOptions.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="month">
+      {{#if data.birth.month}}
+      <option>{{data.birth.month}}</option>
+      {{/if}}
+      {{#each birthOptions.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="date">
+      {{#if data.birth.date}}
+      <option>{{data.birth.date}}</option>
+      {{/if}}
+      {{#each birthOptions.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div class="input__select">
+    <label>死亡日期</label>
+    <select name="year1">
+      {{#if data.death.year}}
+      <option>{{data.death.year}}</option>
+      {{/if}}
+      {{#each birthOptions.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="month1">
+      {{#if data.death.month}}
+      <option>{{data.death.month}}</option>
+      {{/if}}
+      {{#each birthOptions.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="date1">
+      {{#if data.death.date}}
+      <option>{{data.death.date}}</option>
+      {{/if}}
+      {{#each birthOptions.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+  <div class="input__text">
+    <label>家庭编号</label>
+    <input type="text" name="familyNumber" value="{{data.familyNumber}}" />
+  </div>
+
+  <div class="input__radio">
+    <label>是否户主</label>
+    {{#if data.isHouseholderStr}}
+    ：{{data.isHouseholderStr}}
+    {{else}}
+    <input type="radio" name="isHouseHolder" value="0" />是
+    <input type="radio" name="isHouseHolder" value="1" />否
+    {{/if}}
+
+  </div>
+
+
+  <div class="input__text">
+    <label>联系电话</label>
+    <input type="number" name="mobilePhone" value="{{data.mobilePhone}}" />
+  </div>
+
+  <div class="input__text">
+    <label>邮箱</label>
+    <input type="text" name="email" value="{{data.email}}" />
+  </div>
+
+  <div class="input__select">
+    <label>户口类型</label>
+    <select name="type">
+      <option value="0" {{#is data.type '==' 0}}selected{{/is}}>城镇</option>
+      <option value="1" {{#is data.type '==' 1}}selected{{/is}}>农业</option>
+    </select>
+  </div>
+
+  <div class="input__select">
+    <label>婚姻状况</label>
+    <select name="status" placeholder="请选择">
+      <option value="0" {{#is data.status '==' '0'}}selected{{/is}}>未婚</option>
+      <option value="1" {{#is data.status '==' '1'}}selected{{/is}}>已婚</option>
+    </select>
+  </div>
+  <div class="input__select" style="position: relative">
+    <label>政治面貌</label>
+    <select name="politicsStatus">
+      <option value="1" {{#is data.politicsStatus '==' '1'}}selected{{/is}}>群众</option>
+      <option value="2" {{#is data.politicsStatus '==' '2'}}selected{{/is}}>党员</option>
+    </select>
+    <div style="position: absolute;right: 0;top:-32px">
+      <div class="form-btn">
+        <button>
+          <a href="{{_href.partyMember}}?idcard={{idcard}}">党员信息登记</a>
+        </button>
+      </div>
+      <div class="form-btn">
+        <button>
+          <a href="{{_href.retire}}?idcard={{idcard}}">退役军人信息登记</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4">{{data.remark}}</textarea>
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="basicInfoBtn">保存个人信息</button>
+  </div>
+
+</form>

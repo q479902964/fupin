@@ -1,0 +1,17 @@
+<ul>
+  {{#each data}}
+    <a href="{{../_href.land}}?idcard={{idcard}}&id={{id}}">
+      <li class="list__item">
+          <div class="list__item--info">
+            <div class="info__card">耕地面积：{{arableArea}}</div>
+            <div class="info__card">林地面积：{{woodlandArea}}</div>
+          </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
+
+  {{/each}}
+</ul>
+<div class="form-btn">
+  <button type="button"><a href="{{_href.land}}?idcard={{idcard}}">添加家庭公有资产信息</a></button>
+</div>

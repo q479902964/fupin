@@ -1,0 +1,93 @@
+{{#if id}}
+<form class="form-container" id="educationForm">
+  <div class="input__text">
+    <label>教育类型</label>
+    <input type="text" value="{{data.educationTypeStr}}" readonly/>
+    <input type="hidden" name="educationType" value="{{data.educationType}}" />
+  </div>
+
+  <div class="input__text">
+    <label>学校名称</label>
+    <input type="text" name="schoolName" value="{{data.schoolName}}" />
+  </div>
+
+  <div class="input__text">
+    <label>地址：</label>
+    <input type="text" name="schoolAddress" value="{{data.schoolAddress}}" />
+
+  </div>
+
+  <div class="input__text">
+    <label>开始日期</label>
+    <input type="text" name="beginDate" value="{{data.beginDate}}" />
+
+  </div>
+  <div class="input__text">
+    <label>结束日期</label>
+    <input type="text" name="endDate" value="{{data.endDate}}" />
+
+  </div>
+  <div class="form-btn">
+    <button type="button" id="addEduBtn">修改教育信息</button>
+  </div>
+</form>
+{{else}}
+
+
+ <form class="form-container" id="educationForm">
+  <div class="input__select">
+    <label>教育类型</label>
+    <select name="educationType">
+      <option value="0">幼儿园</option>
+      <option value="1">小学</option>
+      <option value="2">初中</option>
+      <option value="3">高中</option>
+      <option value="4">大学</option>
+      <option value="5">中等职业教育</option>
+      <option value="6">技工学校</option>
+    </select>
+  </div>
+
+  <div class="input__text">
+    <label>学校名称</label>
+    <input type="text" name="schoolName" />
+  </div>
+
+  <div>
+    <div class="input__text" style="border-bottom: none; padding: 16px 16px 0 16px;">
+      <label>地址：</label>
+    </div>
+    <div class="J-address-select-slot"></div>
+
+    <div class="input__text" style="padding: 0 20px 4px 24px;">
+      <input type="text" name="detail" placeholder="详细街道信息" />
+    </div>
+  </div>
+
+  <div class="input__select">
+    <label>开始日期</label>
+    <select class="J-start-year" name="startYear">
+
+    </select> 年
+    <select class="J-start-month" name="startMonth">
+
+    </select> 月
+  </div>
+  <div class="input__select">
+    <label>结束日期</label>
+    <select class="J-end-year" name="endYear">
+
+    </select> 年
+    <select class="J-end-month" name="endMonth">
+
+    </select> 月
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="addEduBtn">保存教育信息</button>
+  </div>
+
+
+</form>
+
+{{/if}}

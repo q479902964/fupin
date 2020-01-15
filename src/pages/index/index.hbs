@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>主页</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="header__btn-left"> </div>
+    <div class="header__title">主页</div>
+    <div class="header__btn--right" id="logOut">退出</div>
+  </header>
+
+  <form class="filter__bar" id="searchForm">
+    <div class="filter__search">
+      <input type="text" name="search" />
+      <i class="_icon icon-search" id="searchBtn"></i>
+    </div>
+
+    <div class="filter__btn filter__mine" id="filterMine">我创建的</div>
+    <a class="filter__btn" href="/pages/edit/edit.html">添加</a>
+  </form>
+
+  <ul class="user-list" id="loading-slot">
+    <div class="loading"></div>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+
+
+<form class="form-container">
+  <div class="form__title">牲畜信息</div>
+  <ul>
+    {{#each data}}
+      <a href="{{../_href.personalLivestock}}?idcard={{idcard}}&id={{id}}">
+        <li class="list__item">
+            <div class="list__item--info">
+              <div class="info__card">牲畜类型：{{typeStr}}</div>
+              <div class="info__card">数量：{{count}}</div>
+              <div class="info__card">本年度价值：{{assetValue}}</div>
+            </div>
+          <i class="_icon icon-arrow"></i>
+        </li>
+      </a>
+
+    {{/each}}
+  </ul>
+  <div class="form-btn">
+    <button type="button"><a href="{{_href.personalLivestock}}?idcard={{idcard}}">添加牲畜信息</a></button>
+  </div>
+</form>

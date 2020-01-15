@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "useBuiltIns": false,
+        "uglify": true,
+        "targets": {
+          "browsers": [
+            "last 2 versions"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-class-properties",
+    ["transform-runtime",{"polyfill": false}],
+    // ["transform-object-rest-spread",{"useBuiltIns": true}],
+    ["import", { "libraryName": "antd", "style": true }]
+  ]
+}

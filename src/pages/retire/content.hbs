@@ -1,0 +1,93 @@
+{{#if id}}
+<form class="form-container" id="retireForm">
+  <div class="input__text">
+    <label>退役证件号</label>
+    <input type="text" name="certificateNo" value="{{data.certificateNo}}" />
+  </div>
+
+  <div class="input__text">
+    <label>退役部队名称</label>
+    <input type="text" name="unitName" value="{{data.unitName}}" />
+  </div>
+
+  <div class="input__text">
+    <label>服役部队代号</label>
+    <input type="text" name="unitCode" value="{{data.unitCode}}" />
+  </div>
+  <div class="input__text">
+    <label>部队职务级别</label>
+    <input type="text" name="rank" value="{{data.rank}}" />
+  </div>
+  <div class="input__select">
+    <label>入伍时间</label>
+    <input type="text" name="militaryDate" value="{{data.militaryDate}}" />
+  </div>
+  <div class="input__select">
+    <label>退役时间</label>
+    <input type="text" name="retiredDate" value="{{data.retiredDate}}" />
+  </div>
+  <div class="input__text">
+    <label>服义务兵年限</label>
+    <input type="text" name="militaryServiceYears" value="{{data.militaryServiceYears}}" style="width:50%"/>年
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="saveInfoBtn">保存退役军人信息</button>
+  </div>
+</form>
+{{else}}
+<form class="form-container" id="retireForm">
+  <div class="input__text">
+    <label>退役证件号</label>
+    <input type="text" name="certificateNo" value="" />
+  </div>
+
+  <div class="input__text">
+    <label>退役部队名称</label>
+    <input type="text" name="unitName" value="" />
+  </div>
+
+  <div class="input__text">
+    <label>服役部队代号</label>
+    <input type="text" name="unitCode" value="" />
+  </div>
+  <div class="input__text">
+    <label>部队职务级别</label>
+    <input type="text" name="rank" value="" />
+  </div>
+  <div class="input__select">
+    <label>入伍时间</label>
+    <select class="J-start-year" name="startYear">
+
+    </select> 年
+    <select class="J-start-month" name="startMonth">
+
+    </select> 月
+    <select class="J-start-date" name="startDate">
+
+    </select> 日
+  </div>
+  <div class="input__select">
+    <label>退役时间</label>
+    <select class="J-end-year" name="endYear">
+
+    </select> 年
+    <select class="J-end-month" name="endMonth">
+
+    </select> 月
+    <select class="J-end-date" name="endDate">
+
+    </select> 日
+  </div>
+  <div class="input__text">
+    <label>服义务兵年限</label>
+    <input type="text" name="militaryServiceYears" value="" style="width:50%"/>年
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="saveInfoBtn">新增退役军人信息</button>
+  </div>
+</form>
+{{/if}}
+
+

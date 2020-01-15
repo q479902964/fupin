@@ -1,0 +1,24 @@
+
+
+<form class="form-container">
+  <div class="form__title">车辆信息</div>
+  <ul>
+
+    {{#each data}}
+      <a href="{{../_href.personalVehicle}}?idcard={{idcard}}&id={{id}}">
+        <li class="list__item">
+            <div class="list__item--info">
+              <div class="info__card">车辆类型-品牌型号：{{vehicleTypeStr}}-{{brandModel}}</div>
+              <div class="info__card">车牌号-发动机号：{{plateNumber}}-{{engineType}}</div>
+              <div class="info__card">本年度价值：{{assetValue}} 元</div>
+            </div>
+          <i class="_icon icon-arrow"></i>
+        </li>
+      </a>
+
+    {{/each}}
+  </ul>
+  <div class="form-btn">
+    <button type="button"><a href="{{_href.personalVehicle}}?idcard={{idcard}}">添加车辆信息</a></button>
+  </div>
+</form>

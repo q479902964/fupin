@@ -1,0 +1,135 @@
+{{#if id}}
+<form class="form-container" id="farmingForm">
+  <div class="input__text">
+    <label>农机类型</label>
+    <input type="text" value="{{data.typeStr}}" readonly/>
+  </div>
+
+  <div class="input__text">
+    <label>品牌型号</label>
+    <input type="text" name="brandModel" value="{{data.brandModel}}" />
+  </div>
+
+  <div class="input__text">
+    <label>车牌号</label>
+    <input type="text" name="plateNumber" value="{{data.plateNumber}}" />
+  </div>
+
+  <div class="input__text">
+    <label>发动机号</label>
+    <input type="text" name="engineType" value="{{data.engineType}}" />
+  </div>
+
+  <div class="input__text">
+    <label>起始日期</label>
+    <input type="text" name="beginDate" value="{{data.beginDate}}" />
+  </div>
+
+  <div class="input__text">
+    <label>终止日期</label>
+    <input type="text" name="endDate" value="{{data.endDate}}" />
+  </div>
+
+  <div class="input__text">
+    <label>本年度价值</label>
+    <input type="text" name="assetValue" value="{{data.assetValue}}" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4">{{data.remark}}</textarea>
+  </div>
+
+
+  <div class="form-btn">
+    <button type="button" id="addFarmingBtn">保存个人农机信息</button>
+  </div>
+
+{{else}}
+
+<form class="form-container" id="farmingForm">
+  <div class="input__select">
+    <label>农机类型</label>
+    <select name="type">
+      <option value="1">耕整机械</option>
+      <option value="2">植保机械</option>
+      <option value="3">排灌机械</option>
+      <option value="4">动力输送机械</option>
+      <option value="5">种植施肥机械</option>
+      <option value="6">收获机械</option>
+      <option value="7">粮油机械</option>
+      <option value="8">果蔬机械</option>
+      <option value="9">其他机械</option>
+    </select>
+  </div>
+
+  <div class="input__text">
+    <label>品牌型号</label>
+    <input type="text" name="brandModel" />
+  </div>
+
+  <div class="input__text">
+    <label>车牌号</label>
+    <input type="text" name="plateNumber" />
+  </div>
+
+  <div class="input__text">
+    <label>发动机号</label>
+    <input type="text" name="engineType" />
+  </div>
+
+  <div class="input__select">
+    <label>起始日期</label>
+    <select name="start_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="start_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="start_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div class="input__select">
+    <label>终止日期</label>
+    <select name="end_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="end_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="end_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div class="input__text">
+    <label>本年度价值</label>
+    <input type="text" name="assetValue" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4"></textarea>
+  </div>
+
+
+  <div class="form-btn">
+    <button type="button" id="addFarmingBtn">保存个人农机信息</button>
+  </div>
+</form>
+
+{{/if}}

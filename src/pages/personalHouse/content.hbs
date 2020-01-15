@@ -1,0 +1,136 @@
+{{#if id}}
+
+<form class="form-container" id="houseForm">
+  <div class="input__text">
+    <label>房屋结构</label>
+    <input type="text" name="buildingStructure" value="{{data.buildingStructure}}" readonly/>
+  </div>
+
+  <div class="input__text">
+    <label>建筑面积</label>
+    <input type="text" name="buildingArea" value="{{data.buildingArea}}" />m²
+  </div>
+
+  <div class="input__text">
+    <label>居住面积</label>
+    <input type="text" name="livingArea" value="{{data.livingArea}}" />m²
+  </div>
+
+  <div class="input__text">
+    <label>起始日期</label>
+    <input type="text" name="beginDate" value="{{data.beginDate}}" />
+  </div>
+  <div class="input__text">
+    <label>终止日期</label>
+    <input type="text" name="endDate" value="{{data.endDate}}" />
+  </div>
+
+  <div class="input__text">
+    <label>地址</label>
+    <input type="text" name="address" value="{{data.address}}" />
+  </div>
+
+  <div class="input__text">
+    <label>本资产年价值</label>
+    <input type="text" name="assetValue" value="{{data.assetValue}}" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" name="remark" rows="4">{{data.remark}}</textarea>
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="addHouseBtn">保存个人房产信息</button>
+  </div>
+</form>
+
+{{else}}
+
+<form class="form-container" id="houseForm">
+  <div class="input__select">
+    <label>房屋结构</label>
+    <select name="buildingStructure">
+      <option value="0">砖木结构</option>
+      <option value="1">砖混结构</option>
+      <option value="2">钢筋混凝土结构</option>
+      <option value="4">钢结构</option>
+    </select>
+  </div>
+
+  <div class="input__text">
+    <label>建筑面积</label>
+    <input type="text" name="buildingArea" value="{{data.buildingArea}}" />m²
+  </div>
+
+  <div class="input__text">
+    <label>居住面积</label>
+    <input type="text" name="livingArea" value="{{data.livingArea}}" />m²
+  </div>
+
+  <div class="input__select">
+    <label>起始日期</label>
+    <select name="start_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="start_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="start_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div class="input__select">
+    <label>终止日期</label>
+    <select name="end_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="end_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="end_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div>
+    <div class="input__text" style="border-bottom: none; padding: 16px 16px 0 16px;">
+      <label>地址：</label>
+    </div>
+    <div class="J-address-select-slot"></div>
+
+    <div class="input__text" style="padding: 0 20px 4px 24px;">
+      <input type="text" name="detail" placeholder="具体地址" />
+    </div>
+  </div>
+
+  <div class="input__text">
+    <label>本资产年价值</label>
+    <input type="text" name="assetValue" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4"></textarea>
+  </div>
+
+
+  <div class="form-btn">
+    <button type="button" id="addHouseBtn">保存个人房产信息</button>
+  </div>
+</form>
+
+{{/if}}

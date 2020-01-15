@@ -1,0 +1,23 @@
+
+
+<form class="form-container">
+  <div class="form__title">房产信息</div>
+  <ul>
+    {{#each data}}
+      <a href="{{../_href.personalHouse}}?idcard={{idcard}}&id={{id}}">
+        <li class="list__item">
+            <div class="list__item--info">
+              <div class="info__card">地址：{{address}}</div>
+              <div class="info__card">建筑面积：{{buildingArea}} m²</div>
+              <div class="info__card">本年度价值：{{assetValue}} 元</div>
+            </div>
+          <i class="_icon icon-arrow"></i>
+        </li>
+      </a>
+
+    {{/each}}
+  </ul>
+  <div class="form-btn">
+    <button type="button"><a href="{{_href.personalHouse}}?idcard={{idcard}}">添加房产信息</a></button>
+  </div>
+</form>

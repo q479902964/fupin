@@ -1,0 +1,69 @@
+{{#if id}}
+<form class="form-container" id="marriageForm">
+  <div class="input__text">
+    <label>婚姻类型</label>
+    <input type="text" value="{{data.typeStr}}" readonly />
+    <input type="hidden" value="{{data.type}}" name="type" />
+  </div>
+
+  <div class="input__text">
+    <label>对方身份证</label>
+    <input type="text" value="{{data.spouseIdcard}}" name="spouseIdcard" />
+  </div>
+  <div class="input__text">
+    <label>对方名称</label>
+    <input type="text" value="{{data.spouseName}}" name="spouseName" />
+  </div>
+
+  <div class="input__text">
+    <label>办理日期</label>
+    <input value="{{data.occurrenceTime}}" name="occurrenceTime" />
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="addMarriageBtn">修改婚姻信息</button>
+  </div>
+</form>
+
+{{else}}
+
+<form class="form-container" id="marriageForm">
+  <div class="input__select">
+    <label>婚姻类型</label>
+    <select name="type">
+      <option value="0">未婚</option>
+      <option value="1">已婚（有配偶）</option>
+      <option value="2">丧偶</option>
+      <option value="3">离婚</option>
+    </select>
+  </div>
+
+  <div class="input__text">
+    <label>对方身份证</label>
+    <input type="text" name="spouseIdcard" />
+  </div>
+  <div class="input__text">
+    <label>对方名称</label>
+    <input type="text" name="spouseName" />
+  </div>
+
+  <div class="input__select">
+    <label>办理日期</label>
+    <select class="J-year" name="year">
+
+    </select>年
+    <select class="J-month" name="month">
+
+    </select>月
+
+    <select class="J-date" name="date">
+
+    </select>日
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="addMarriageBtn">保存婚姻信息</button>
+  </div>
+</form>
+
+{{/if}}

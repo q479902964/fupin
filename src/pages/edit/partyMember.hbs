@@ -1,0 +1,17 @@
+<ul>
+
+  {{#each data}}
+    <a href="{{../_href.partyMember}}?idcard={{idcard}}&id={{id}}">
+      <li class="list__item">
+          <div class="list__item--info">
+            <div class="info__name">党支部：{{currentPartyBranch}}</div>
+            <div class="info__card">转正时间：{{positiveDate}}</div>
+          </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
+  {{/each}}
+</ul>
+<div class="form-btn">
+  <button type="button"><a href="{{_href.partyMember}}?idcard={{idcard}}">添加党员信息</a></button>
+</div>

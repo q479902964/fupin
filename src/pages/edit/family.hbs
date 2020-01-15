@@ -1,0 +1,43 @@
+<div>
+  {{#each data}}
+  <div class="input__text">
+    <label>户号</label>
+    <input type="text" value="{{familyNumber}}" readonly/>
+  </div>
+  <div class="input__text">
+    <label>所属村落</label>
+    <input type="text" value="{{village}}" readonly/>
+  </div>
+  <div class="input__text">
+    <label>助记码</label>
+    <input type="text" value="{{mnemonicCode}}" readonly/>
+  </div>
+  <div class="input__text">
+    <label>联系号码</label>
+    <input type="text" value="{{telephone}}" readonly/>
+  </div>
+  <div class="input__text">
+    <label>门牌号</label>
+    <input type="text" value="{{houseNumber}}" readonly/>
+  </div>
+  <div class="input__text">
+    <label>家庭地址</label>
+    <input type="text" value="{{address}}" readonly/>
+  </div>
+  {{/each}}
+  <ul>
+    {{#each data}}
+    <li class="list__item">
+      <i class="_icon icon-user"></i>
+      <div class="list__item--info">
+        <div class="info__name">{{username}}</div>
+        <div class="info__card">{{idcard}}</div>
+      </div>
+      <i class="_icon icon-arrow"></i>
+    </li>
+    {{/each}}
+  </ul>
+
+</div>
+<button type="button"><a href="{{_href.family}}?idcard={{idcard}}">添加家庭信息</a></button>
+

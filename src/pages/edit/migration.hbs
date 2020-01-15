@@ -1,0 +1,19 @@
+<ul>
+  {{#each data}}
+    <a href="{{../_href.migration}}?idcard={{idcard}}&id={{id}}">
+      <li class="list__item">
+          <div class="list__item--info">
+            <div class="info__name">
+              {{typeStr}}地:{{migrationAddress}}
+            </div>
+            <div class="info__card">时间：{{occurrenceTime}}</div>
+            <div class="info__card">备注：{{remark}}</div>
+          </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
+  {{/each}}
+</ul>
+<div class="form-btn">
+  <button type="button"><a href="{{_href.migration}}?idcard={{idcard}}">添加迁移信息</a></button>
+</div>

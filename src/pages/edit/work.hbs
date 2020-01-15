@@ -1,0 +1,17 @@
+<ul>
+
+  {{#each data}}
+    <a href="{{../_href.work}}?idcard={{idcard}}&id={{id}}">
+      <li class="list__item">
+          <div class="list__item--info">
+            <div class="info__name">{{sectorStr}} : {{companyName}} {{jobTitle}}</div>
+            <div class="info__card">{{beginTime}} ~ {{endTime}}</div>
+          </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
+  {{/each}}
+</ul>
+<div class="form-btn">
+  <button type="button"><a href="{{_href.work}}?idcard={{idcard}}">添加就业信息</a></button>
+</div>

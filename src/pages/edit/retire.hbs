@@ -1,0 +1,17 @@
+<ul>
+
+  {{#each data}}
+    <a href="{{../_href.retire}}?idcard={{idcard}}&id={{id}}">
+      <li class="list__item">
+          <div class="list__item--info">
+            <div class="info__name">部队-级别：{{rank}}</div>
+            <div class="info__card">时间：{{militaryDate}} ~ {{retiredDate}}</div>
+          </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
+  {{/each}}
+</ul>
+<div class="form-btn">
+  <button type="button"><a href="{{_href.retire}}?idcard={{idcard}}">添加退役军人信息</a></button>
+</div>

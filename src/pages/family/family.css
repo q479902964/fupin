@@ -1,0 +1,14 @@
+@import '../../global/_common.css';
+
+html, body {
+    overflow: hidden;
+}
+.swiper-container {
+    display: flex;
+    transition: all 0.3s;
+}
+
+.swiper-slide {
+    width: 100%;
+    flex-shrink: 0;
+}

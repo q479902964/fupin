@@ -1,0 +1,78 @@
+{{#if id}}
+<form class="form-container" id="parMemForm">
+  <div class="input__text">
+    <label>入党时的支部</label>
+    <input type="text" name="partyBranch" value="{{data.partyBranch}}" />
+  </div>
+
+  <div class="input__text">
+    <label>入党介绍人</label>
+    <input type="text" name="introducer" value="{{data.introducer}}" />
+
+  </div>
+
+  <div class="input__text">
+    <label>当前的支部</label>
+    <input type="text" name="currentPartyBranch" value="{{data.currentPartyBranch}}" />
+  </div>
+  <div class="input__select">
+    <label>入党时间</label>
+    <input type="text" name="joinDate" value="{{data.joinDate}}" />
+  </div>
+  <div class="input__select">
+    <label>转正时间</label>
+    <input type="text" name="positiveDate" value="{{data.positiveDate}}" />
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="saveInfoBtn">保存党员信息</button>
+  </div>
+</form>
+{{else}}
+<form class="form-container" id="parMemForm">
+  <div class="input__text">
+    <label>入党时的支部</label>
+    <input type="text" name="partyBranch" value="" />
+  </div>
+
+  <div class="input__text">
+    <label>入党介绍人</label>
+    <input type="text" name="introducer" value="" />
+
+  </div>
+
+  <div class="input__text">
+    <label>当前的支部</label>
+    <input type="text" name="currentPartyBranch" value="" />
+  </div>
+  <div class="input__select">
+    <label>入党时间</label>
+    <select class="J-start-year" name="startYear">
+
+    </select> 年
+    <select class="J-start-month" name="startMonth">
+
+    </select> 月
+    <select class="J-start-date" name="startDate">
+
+    </select> 日
+  </div>
+  <div class="input__select">
+    <label>转正时间</label>
+    <select class="J-end-year" name="endYear">
+
+    </select> 年
+    <select class="J-end-month" name="endMonth">
+
+    </select> 月
+    <select class="J-end-date" name="endDate">
+
+    </select> 日
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="saveInfoBtn">添加党员信息</button>
+  </div>
+</form>
+{{/if}}
+

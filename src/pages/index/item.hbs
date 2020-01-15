@@ -1,0 +1,13 @@
+{{#each data}}
+<a href="/pages/edit/edit.html?rid={{rid}}&idcard={{idcard}}">
+  <li class="list__item">
+    <i class="_icon icon-user"></i>
+    <div class="list__item--info">
+      <div class="info__name">{{username}} <span>{{sex}}</span></div>
+      <div class="info__card">{{idcard}}</div>
+    </div>
+    <i class="_icon icon-arrow"></i>
+  </li>
+</a>
+
+{{/each}}

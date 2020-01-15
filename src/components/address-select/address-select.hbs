@@ -1,0 +1,23 @@
+ <div class="input__select J-address-select" >
+  <select class="J-select-province" name="province">
+
+    {{!-- <option disabled selected value></option> --}}
+
+    {{#each province}}
+    <option>{{name}}</option>
+    {{/each}}
+  </select>
+
+  <select class="J-select-city" name="city">
+    {{#each cityList}}
+    <option>{{name}}</option>
+    {{/each}}
+  </select>
+
+  <select class="J-select-district" name="district">
+    {{#each areaList}}
+    <option>{{this}}</option>
+    {{/each}}
+
+  </select>
+</div>

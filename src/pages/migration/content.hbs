@@ -1,0 +1,72 @@
+{{#if id}}
+<form class="form-container" id="migrationForm">
+  <div class="input__text">
+    <label>迁移类型</label>
+    <input type="text" value="{{data.typeStr}}" readonly />
+    <input type="hidden" value="{{data.type}}" />
+  </div>
+
+  <div class="input__text">
+    <label>迁移地址</label>
+    <input type="text" value="{{data.migrationAddress}}" name="migrationAddress" />
+  </div>
+
+  <div class="input__text">
+    <label>迁移日期</label>
+    <input type="text" value="{{data.occurrenceTime}}" name="occurrenceTime" />
+  </div>
+
+  <div class="input__text">
+    <label>备注</label>
+    <input type="text" value="{{data.remark}}" name="remark" />
+  </div>
+
+   <div class="form-btn">
+    <button type="button" id="addMigrationBtn">修改户口迁移信息</button>
+  </div>
+</form>
+{{else}}
+
+<form class="form-container" id="migrationForm">
+  <div class="input__radio">
+    <label>迁移类型</label>
+    <input type="radio" name="type" value="0" checked/>迁入
+    <input type="radio" name="type" value="1" />迁出
+  </div>
+
+  <div>
+    <div class="input__text" style="border-bottom: none; padding: 16px 16px 0 16px;">
+      <label>迁移地址：</label>
+    </div>
+    <div class="J-address-select-slot"></div>
+
+    <div class="input__text" style="padding: 0 20px 4px 24px;">
+      <input type="text" name="detail" placeholder="详细街道信息" />
+    </div>
+  </div>
+
+
+  <div class="input__select">
+    <label>迁移日期</label>
+    <select class="J-year" name="year">
+
+    </select>年
+    <select class="J-month" name="month">
+
+    </select>月
+
+    <select class="J-date" name="date">
+
+    </select>日
+  </div>
+
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4"></textarea>
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="addMigrationBtn">添加户口迁移信息</button>
+  </div>
+</form>
+{{/if}}

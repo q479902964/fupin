@@ -1,0 +1,17 @@
+<ul>
+  {{#each data}}
+    <a href="{{../_href.education}}?idcard={{idcard}}&id={{id}}">
+      <li class="list__item">
+          <div class="list__item--info">
+            <div class="info__name">{{educationTypeStr}} : {{schoolName}}</div>
+            <div class="info__card">{{beginDate}} ~ {{endDate}}</div>
+          </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
+
+  {{/each}}
+</ul>
+<div class="form-btn">
+  <button type="button"><a href="{{_href.education}}?idcard={{idcard}}">添加教育信息</a></button>
+</div>

@@ -1,0 +1,1002 @@
+{
+  "info": {
+    "_postman_id": "ec890af9-4714-4b38-9f17-750322872d82",
+    "name": "ReliefMgr-app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "登录",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "account",
+              "value": "test",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/login",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "login"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "登出",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "account",
+              "value": "123456",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/logout",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "logout"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "人员信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "李白",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "familyNumber",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "sex",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "type",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "人员信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"birthday\": \"2019-04-28\",\n        \"remark\": \"adsasd设备\",\n        \"deathdate\": \"2019-05-31\",\n        \"type\": 0,\n        \"politicsStatus\": 1,\n        \"createid\": -1,\n        \"familyNumber\": \"A-654-980\",\n        \"createtime\": \"2019-05-31 11:00:40.0\",\n        \"sex\": 1,\n        \"opinion\": \"ffffffff\",\n        \"idcard\": \"123456789123456789\",\n        \"lastUpdateUser\": -1,\n        \"isHouseholder\": 0,\n        \"age\": 0,\n        \"lastUpdateTime\": \"2019-06-16 12:55:33.0\",\n        \"status\": 1,\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "户口迁移信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "type",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentMigrationList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentMigrationList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "户口迁移信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"createtime\": \"2019-06-16 12:55:51.0\",\n        \"createid\": -1,\n        \"idcard\": \"123456789123456789\",\n        \"lastUpdateUser\": -1,\n        \"occurrenceTime\": \"2019-06-03\",\n        \"migrationAddress\": \"sdgsd\",\n        \"remark\": \"xxafx\",\n        \n        \"rid\": 26,\n        \"type\": 0,\n        \"lastUpdateTime\": \"2019-06-17 22:56:19.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentMigrationMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentMigrationMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "婚姻信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "type",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentMaritalStatusList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentMaritalStatusList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "婚姻信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"createtime\": \"2019-06-16 12:55:51.0\",\n        \"createid\": -1,\n        \"idcard\": \"123456789123456789\",\n        \"lastUpdateUser\": -1,\n        \"occurrenceTime\": \"2019-06-03\",\n        \"migrationAddress\": \"sdgsd\",\n        \"remark\": \"xxafx\",\n        \n        \"rid\": 26,\n        \"type\": 0,\n        \"lastUpdateTime\": \"2019-06-17 22:56:19.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentMaritalStatusMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentMaritalStatusMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "就业信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "industryType",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "companyType",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "sector",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentWorkExperienceList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentWorkExperienceList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "就业信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"createtime\": \"2019-06-16 12:55:51.0\",\n        \"remark\": \"xxafx\",\n        \"rid\": 26,\n        \"createid\": -1,\n        \"idcard\": \"123456789123456789\",\n        \"lastUpdateUser\": -1,\n        \n        \"lastUpdateTime\": \"2019-06-18 14:30:53.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentWorkExperienceMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentWorkExperienceMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "人员年收入信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "industryType",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "companyType",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "sector",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentAnnualIncomeList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentAnnualIncomeList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "人员年收入信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"average\": 2,\n        \"createtime\": \"2019-06-16 21:41:30.0\",\n        \"companyType\": 0,\n        \"year\": \"2011\",\n        \"remark\": \"31\",\n        \"sectorStr\": \"教育\",\n        \"rid\": 26,\n        \"total\": 1111,\n        \"industryType\": 1,\n        \"createid\": -1,\n        \"idcard\": \"123456789123456789\",\n        \"lastUpdateUser\": -1,\n        \n        \"sector\": \"SECTOR0016\",\n        \"lastUpdateTime\": \"2019-06-17 22:56:42.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentAnnualIncomeMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentAnnualIncomeMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "人员资产信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "assetType",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "sector",
+              "value": "",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentAssetList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentAssetList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "人员资产信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": " {\n        \"createtime\": \"2019-06-16 17:31:27.0\",\n        \"year\": \"2011\",\n        \"remark\": \"211\",\n        \"assetValue\": \"11\",\n        \"rid\": 26,\n        \"assetType\": 1,\n        \"createid\": -1,\n        \"idcard\": \"123456789123456789\",\n        \"assetName\": \"22\",\n        \"lastUpdateUser\": -1,\n        \n        \"lastUpdateTime\": \"2019-06-17 22:59:41.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentAssetMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentAssetMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "家庭基本信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "year",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentFamilyBasicInformationList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentFamilyBasicInformationList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "家庭基本信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"createtime\": \"2019-06-16 21:42:12.0\",\n        \"address\": \"5xxxxx\",\n        \"year\": \"2014\",\n        \"houseNumber\": \"11\",\n        \"remark\": \"测试m\",\n        \"telephone\": \"111111111111\",\n        \"rid\": 26,\n        \"ruralPopulation\": 3,\n        \"createid\": -1,\n        \"familyPlan\": 5,\n        \"idcard\": \"123456789123456789\",\n        \"migrantWorkers\": 4,\n        \"mobilephone\": \"11\",\n        \"familyNumber\": \"A-654-980\",\n        \"lastUpdateUser\": -1,\n        \"mnemonicCode\": \"11111111111111\",\n        \"id\":1,\n        \"familyPopulation\": 23,\n        \"village\": \"111\",\n        \"isHouseholder\": 0,\n        \"lastUpdateTime\": \"2019-06-17 23:00:25.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentFamilyBasicInformationMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentFamilyBasicInformationMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "家庭资产信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "year",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentHouseholdAssetList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentHouseholdAssetList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "家庭资产信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"farmMachineryCount\": 9,\n        \"createtime\": \"2019-06-16 22:05:22.0\",\n        \"arableArea\": \"4\",\n        \"woodlandArea\": \"5\",\n        \"year\": \"2019\",\n        \"buildingArea\": \"3\",\n        \"remark\": \"测试m\",\n        \"farmMachineryType\": \"8\",\n        \"rid\": 26,\n        \"livingArea\": \"2\",\n        \"buildingStructure\": \"1\",\n        \"vehicleCount\": 7,\n        \"createid\": -1,\n        \"idcard\": \"123456789123456789\",\n        \"familyNumber\": \"A-654-980\",\n        \"lastUpdateUser\": -1,\n        \"id\": 1,\n        \"isHouseholder\": 0,\n        \"vehicleType\": \"6\",\n        \"lastUpdateTime\": \"2019-06-17 23:00:33.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentHouseholdAssetMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentHouseholdAssetMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "家庭信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "year",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentFamilyInformationList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentFamilyInformationList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "家庭信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"createtime\": \"2019-06-16 21:42:12.0\",\n        \"year\": \"2017\",\n        \"permanentCount\": 6,\n        \"remark\": \"测试okx\",\n        \"rid\": 26,\n        \"disposableIncome\": 10000,\n        \"employedCount\": 2,\n        \"createid\": -1,\n        \"idcard\": \"123456789123456789\",\n        \"familyNumber\": \"A-654-980\",\n        \"lastUpdateUser\": -1,\n        \"id\": 1,\n        \"isHouseholder\": 0,\n        \"lastUpdateTime\": \"2019-06-18 15:03:38.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentFamilyInformationMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentFamilyInformationMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "教育信息列表",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "rid",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "idcard",
+              "value": "123456789123456789",
+              "type": "text"
+            },
+            {
+              "key": "educationType",
+              "value": "",
+              "type": "text"
+            },
+            {
+              "key": "year",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentEducationList",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentEducationList"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    },
+    {
+      "name": "教育信息维护",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"educationType\": 3,\n        \"endDate\": \"2021-07\",\n        \"remark\": \"测试ok\",\n        \"rid\": 26,\n        \"createid\": -1,\n        \"familyNumber\": \"A-654-980\",\n        \"id\": 1,\n        \"schoolName\": \"阳江高中\",\n        \"createtime\": \"2019-06-16 21:42:12.0\",\n        \"educationTypeStr\": \"高中\",\n        \"schoolAddress\": \"阳江市xx区yy街道\",\n        \"beginDate\": \"2016-09\",\n        \"idcard\": \"123456789123456789\",\n        \"studentName\": \"李小明\",\n        \"lastUpdateUser\": -1,\n        \"isHouseholder\": 0,\n        \"lastUpdateTime\": \"2019-06-18 15:07:57.0\",\n        \"username\": \"李白\"\n    }"
+        },
+        "url": {
+          "raw": "http://47.99.183.164:8080/reliefmgr/residentEducationMgr",
+          "protocol": "http",
+          "host": [
+            "172",
+            "16",
+            "97",
+            "106"
+          ],
+          "port": "8080",
+          "path": [
+            "reliefmgr",
+            "residentEducationMgr"
+          ]
+        },
+        "description": "扶贫项目测试接口"
+      },
+      "response": []
+    }
+  ]
+}

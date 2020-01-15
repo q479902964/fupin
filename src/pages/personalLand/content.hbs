@@ -1,0 +1,124 @@
+{{#if id}}
+
+<form class="form-container" id="landForm">
+  <div class="input__text">
+    <label>土地类型</label>
+    <input type="text" name="landType" value="{{data.landTypeStr}}" readonly/>
+  </div>
+
+  <div class="input__text">
+    <label>面积</label>
+    <input type="text" name="area" value="{{data.area}}" />m²
+  </div>
+  <div class="input__text">
+    <label>起始日期</label>
+    <input type="text" name="beginDate" value="{{data.beginDate}}" />
+  </div>
+  <div class="input__text">
+    <label>终止日期</label>
+    <input type="text" name="endDate" value="{{data.endDate}}" />
+  </div>
+
+  <div class="input__text">
+    <label>地址</label>
+    <input type="text" name="address" value="{{data.address}}" />
+  </div>
+
+  <div class="input__text">
+    <label>本年度价值</label>
+    <input type="text" name="assetValue" value="{{data.assetValue}}" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" name="remark" rows="4">{{data.remark}}</textarea>
+  </div>
+
+  <div class="form-btn">
+    <button type="button" id="addLandBtn">保存个人土地信息</button>
+  </div>
+</form>
+
+{{else}}
+
+<form class="form-container" id="landForm">
+  <div class="input__select">
+    <label>土地类型</label>
+    <select name="landType">
+      <option value="0">耕地</option>
+      <option value="1">林地</option>
+      <option value="2">建筑用地</option>
+    </select>
+  </div>
+
+  <div class="input__text">
+    <label>面积</label>
+    <input type="text" name="area" />m²
+  </div>
+
+  <div class="input__select">
+    <label>起始日期</label>
+    <select name="start_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="start_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="start_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div class="input__select">
+    <label>终止日期</label>
+    <select name="end_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="end_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="end_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div>
+    <div class="input__text" style="border-bottom: none; padding: 16px 16px 0 16px;">
+      <label>地址：</label>
+    </div>
+    <div class="J-address-select-slot"></div>
+
+    <div class="input__text" style="padding: 0 20px 4px 24px;">
+      <input type="text" name="detail" placeholder="具体地址" />
+    </div>
+  </div>
+
+  <div class="input__text">
+    <label>本年度价值</label>
+    <input type="text" name="assetValue" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4"></textarea>
+  </div>
+
+
+  <div class="form-btn">
+    <button type="button" id="addLandBtn">保存个人土地信息</button>
+  </div>
+</form>
+
+{{/if}}

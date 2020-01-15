@@ -1,0 +1,27 @@
+@import '../../global/_common.css';
+.page-header {
+    height: 50px;
+    background: #164ab0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.login__container {
+    width: 310px;
+    margin: 50px auto;
+}
+
+.login__btn {
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 4px;
+    background: #164ab0;
+    padding: 12px;
+    margin-top: 60px;
+}

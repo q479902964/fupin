@@ -1,0 +1,42 @@
+@import '../../global/_common.css';
+.form-container {
+    margin: 20px 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+.form__title {
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.list__item {
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    margin-bottom: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+.list__item .list__item--info {
+    margin-right: auto;
+    margin-left: 8px;
+}
+.info__name {
+    color: #164ab0;
+}
+
+.list__item .icon-user {
+    width: 40px;
+    height: 40px;
+    background-image: url(../../global/img/user.png);
+}
+
+.list__item .icon-arrow {
+    width: 28px;
+    height: 28px;
+    background-image: url(../../global/img/right.png);
+}

@@ -1,0 +1,134 @@
+{{#if id}}
+<form class="form-container" id="landForm">
+  <div class="input__text">
+    <label>车辆类型</label>
+    <input type="text" value="{{data.vehicleTypeStr}}" readonly/>
+  </div>
+
+  <div class="input__text">
+    <label>品牌型号</label>
+    <input type="text" name="brandModel" value="{{data.brandModel}}" />
+  </div>
+
+  <div class="input__text">
+    <label>车牌号</label>
+    <input type="text" name="plateNumber" value="{{data.plateNumber}}" />
+  </div>
+
+  <div class="input__text">
+    <label>发动机号</label>
+    <input type="text" name="engineType" value="{{data.engineType}}" />
+  </div>
+
+  <div class="input__text">
+    <label>起始日期</label>
+    <input type="text" name="beginDate" value="{{data.beginDate}}" />
+  </div>
+
+  <div class="input__text">
+    <label>终止日期</label>
+    <input type="text" name="beginDate" value="{{data.endDate}}" />
+  </div>
+
+  <div class="input__text">
+    <label>本年度价值</label>
+    <input type="text" name="assetValue" value="{{data.assetValue}}" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4">{{data.remark}}</textarea>
+  </div>
+
+
+  <div class="form-btn">
+    <button type="button" id="addVehicleBtn">保存个人车辆信息</button>
+  </div>
+
+{{else}}
+
+<form class="form-container" id="landForm">
+  <div class="input__select">
+    <label>车辆类型</label>
+    <select name="vehicleType">
+      <option value="1">货车</option>
+      <option value="2">小汽车</option>
+      <option value="3">三轮摩托车</option>
+      <option value="4">摩托车</option>
+      <option value="5">电瓶车</option>
+      <option value="6">自行车</option>
+      <option value="7">农用手推车</option>
+    </select>
+  </div>
+
+
+  <div class="input__text">
+    <label>品牌型号</label>
+    <input type="text" name="brandModel" />
+  </div>
+
+  <div class="input__text">
+    <label>车牌号</label>
+    <input type="text" name="plateNumber" />
+  </div>
+
+  <div class="input__text">
+    <label>发动机号</label>
+    <input type="text" name="engineType" />
+  </div>
+
+  <div class="input__select">
+    <label>起始日期</label>
+    <select name="start_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="start_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="start_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div class="input__select">
+    <label>终止日期</label>
+    <select name="end_year">
+      {{#each options.year}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>年
+    <select name="end_month">
+      {{#each options.month}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>月
+
+    <select name="end_date">
+      {{#each options.date}}
+      <option>{{this}}</option>
+      {{/each}}
+    </select>日
+  </div>
+
+  <div class="input__text">
+    <label>本年度价值</label>
+    <input type="text" name="assetValue" />
+  </div>
+  <div class="_textarea">
+    <label>备注</label>
+    <textarea name="remark" rows="4"></textarea>
+  </div>
+
+
+  <div class="form-btn">
+    <button type="button" id="addVehicleBtn">保存个人车辆信息</button>
+  </div>
+</form>
+
+{{/if}}
