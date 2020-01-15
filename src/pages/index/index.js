@@ -12,7 +12,7 @@ import { indexApi } from '../../global/api'
       if(res && res.length) {
         res.map(item => {
           const { sex } = item;
-          item.sex = (sex == 1 ? '男' : '女')
+          item.sex = (sex == 0 ? '男' : '女')
         })
 
         $('#loading-slot').html(tmpl({ data: res }))

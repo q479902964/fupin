@@ -17,9 +17,10 @@ const { idcard, id } = query();
       $('#marriage-slot').html(tmpl({ data: res, id }))
     })
   } else {
+    let year = (new Date()).getFullYear()
     $('#marriage-slot').html(tmpl())
 
-    $('.J-year').html(optionTmpl({ data: count(2019, 1960)}))
+    $('.J-year').html(optionTmpl({ data: count(year, year-150)}))
     $('.J-month').html(optionTmpl({ data: count(1, 12)}))
     $('.J-date').html(optionTmpl({ data: count(1, 31)}))
 

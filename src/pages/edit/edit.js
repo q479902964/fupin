@@ -56,43 +56,60 @@ const Edit = {
       console.log('res', res)
 
       const { birthday = '', deathdate = '' } = res;
-      const arr = birthday.split('-');
-      const arr2 = deathdate.split('-');
-
-      res.birth = {
-        year: arr[0],
-        month: arr[1],
-        date: arr[2]
+      let year = (new Date()).getFullYear()
+      let year_area = count(year, year-150)
+      let year_area1 = count(year, year-150)
+      let month_area = count(1, 12)
+      let month_area1 = count(1, 12)
+      let date_area = count(1, 31)
+      let date_area1 = count(1, 31)
+      if(birthday!==""){
+        const arr = birthday.split('-');
+    
+        res.birth = {
+          year: arr[0],
+          month: arr[1],
+          date: arr[2]
+        }
       }
 
-      res.death = {
-        year: arr2[0],
-        month: arr2[1],
-        date: arr2[2]
+      if(deathdate!==""){
+        const arr2 = deathdate.split('-');
+        res.death = {
+          year: arr2[0],
+          month: arr2[1],
+          date: arr2[2]
+        }
       }
+      this.initFamily(res.isHouseholderStr)
 
       $('#basic-info-slot').html(basicInfoTmpl({
         data: res,
         idcard,
         _href,
         birthOptions: {
-          year: count(2019, 1920),
-          month: count(1, 12),
-          date: count(1, 31)
+          year: year_area,
+          month: month_area,
+          date:date_area
+        },
+        deathOptions:{
+          year: year_area1,
+          month: month_area1,
+          date:date_area1 
         }
       }, { helpers }))
     })
   },
 
-  // initFamily() {
-  //   // 获取家庭信息
+  initFamily(isHouseholderStr) {
+    // 获取家庭信息
 
-  //   familyApi({ idcard }).then(res => {
-  //     console.log('res', res)
+    familyApi({ idcard }).then(res => {
+      console.log('res', res)
 
-  //     $('#family-slot').html(familyTmpl({ data: res, _href, idcard }))
-  //   })
-  // },
+      $('#family-slot').html(familyTmpl({ data: res, _href, idcard,isHouseholderStr }))
+    })
+  },
 
   initEducation() {
     model.educationApi({ idcard }).then(res => {
@@ -155,7 +172,9 @@ const Edit = {
 
       const { year, month, date, year1, month1, date1 } = params;
       params.birthday = `${year}-${month}-${date}`;
-      params.deathdate = `${year1}-${month1}-${date1}`;
+      if(year1!==""&&month1!==""&&date1!==""){
+        params.deathdate = `${year1}-${month1}-${date1}`;
+      }
 
       if(rid) {
         params.rid = rid;

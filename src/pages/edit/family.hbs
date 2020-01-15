@@ -27,17 +27,22 @@
   {{/each}}
   <ul>
     {{#each data}}
-    <li class="list__item">
-      <i class="_icon icon-user"></i>
-      <div class="list__item--info">
-        <div class="info__name">{{username}}</div>
-        <div class="info__card">{{idcard}}</div>
-      </div>
-      <i class="_icon icon-arrow"></i>
-    </li>
+    <a href="{{../_href.family}}?idcard={{idcard}}&id={{id}}&isHouseholder={{isHouseholder}}">
+      <li class="list__item">
+        <i class="_icon icon-user"></i>
+        <div class="list__item--info">
+          <div class="info__name">{{username}}</div>
+          <div class="info__card">{{idcard}}</div>
+        </div>
+        <i class="_icon icon-arrow"></i>
+      </li>
+    </a>
     {{/each}}
   </ul>
 
 </div>
+{{#if isHouseholderStr}}
 <button type="button"><a href="{{_href.family}}?idcard={{idcard}}">添加家庭信息</a></button>
-
+{{else}}
+<button type="button">添加家庭信息</button>
+{{/if}}

@@ -21,10 +21,10 @@ const { idcard, id } = query();
     $('#education-slot').html(tmpl())
 
     addressSelect.init()
-
-    $('.J-start-year').html(optionTmpl({ data: count(2019, 1960)}))
+    let year = (new Date()).getFullYear()
+    $('.J-start-year').html(optionTmpl({ data: count(year, year-150)}))
     $('.J-start-month').html(optionTmpl({ data: count(1, 12)}))
-    $('.J-end-year').html(optionTmpl({ data: count(2019, 1960)}))
+    $('.J-end-year').html(optionTmpl({ data: count(year, year-150)}))
     $('.J-end-month').html(optionTmpl({ data: count(1, 12)}))
 
 

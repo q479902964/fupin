@@ -18,11 +18,12 @@ const { idcard, id } = query();
     
         })
       } else {
+        let year = (new Date()).getFullYear()
         $("#party-member-slot").html(tmpl())
-        $('.J-start-year').html(optionTmpl({ data: count(2019, 1960)}))
+        $('.J-start-year').html(optionTmpl({ data: count(year, year-150)}))
         $('.J-start-month').html(optionTmpl({ data: count(1, 12)}))
         $('.J-start-date').html(optionTmpl({ data: count(1, 31)}))
-        $('.J-end-year').html(optionTmpl({ data: count(2019, 1960)}))
+        $('.J-end-year').html(optionTmpl({ data: count(year, year-150)}))
         $('.J-end-month').html(optionTmpl({ data: count(1, 12)}))
         $('.J-end-date').html(optionTmpl({ data: count(1, 31)}))
     

@@ -78,6 +78,16 @@ export function familyApi(params = {}) {
   })
 }
 
+//家庭信息详情
+export function familyDetailApi(params = {}) {
+  return request({
+    url: '/reliefmgr/residentFamilyBasicInformationView',
+    params,
+    method: 'POST'
+  })
+}
+
+
 
 // 添加教育经历
 export function addEducationApi(params = {}) {

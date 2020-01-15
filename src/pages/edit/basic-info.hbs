@@ -50,28 +50,31 @@
 
   <div class="input__select">
     <label>死亡日期</label>
-    <select name="year1">
+    <select name="year1" class="death-year">
       {{#if data.death.year}}
       <option>{{data.death.year}}</option>
       {{/if}}
-      {{#each birthOptions.year}}
+      <option></option>
+      {{#each deathOptions.year}}
       <option>{{this}}</option>
       {{/each}}
     </select>年
-    <select name="month1">
+    <select name="month1" class="death-month">
       {{#if data.death.month}}
       <option>{{data.death.month}}</option>
       {{/if}}
-      {{#each birthOptions.month}}
+      <option></option>
+      {{#each deathOptions.month}}
       <option>{{this}}</option>
       {{/each}}
     </select>月
 
-    <select name="date1">
+    <select name="date1" class="death-date">
       {{#if data.death.date}}
       <option>{{data.death.date}}</option>
       {{/if}}
-      {{#each birthOptions.date}}
+      <option></option>
+      {{#each deathOptions.date}}
       <option>{{this}}</option>
       {{/each}}
     </select>日
@@ -124,18 +127,6 @@
       <option value="1" {{#is data.politicsStatus '==' '1'}}selected{{/is}}>群众</option>
       <option value="2" {{#is data.politicsStatus '==' '2'}}selected{{/is}}>党员</option>
     </select>
-    <div style="position: absolute;right: 0;top:-32px">
-      <div class="form-btn">
-        <button>
-          <a href="{{_href.partyMember}}?idcard={{idcard}}">党员信息登记</a>
-        </button>
-      </div>
-      <div class="form-btn">
-        <button>
-          <a href="{{_href.retire}}?idcard={{idcard}}">退役军人信息登记</a>
-        </button>
-      </div>
-    </div>
   </div>
   <div class="_textarea">
     <label>备注</label>
